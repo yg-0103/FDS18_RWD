@@ -39,12 +39,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   background-color: #fff;
-}
-
-/* 내비게이션 내 기본 링크 스타일 */
-nav a {
-  color: inherit;
-  text-decoration: none;
+  color: #181818;
 }
 
 /* a 요소 내 이미지에 발생하는 갭 제게 */
@@ -73,7 +68,7 @@ fieldset {
 }
 
 button[disabled] {
-  cursor: not-allowed;
+  cursor: not-allowed; /* 버튼이 선택 됬을 떄 */
 }
 
 /* 링크 요소의 밑줄 및 글자 색상 재 정의 */
