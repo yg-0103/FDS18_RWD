@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-flow: row wrap;
 }
+
 .app-header-container,
 .app-main,
 .app-footer-container {
@@ -11,9 +12,8 @@ body {
 
 /* 헤더 */
 /* 공통 헤더 */
-.app-header-container {
-  
-}
+.app-header-container {}
+
 .app-header {
   background: #fff;
   display: flex;
@@ -21,20 +21,77 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-  /* 공통 로고 */
-  .brand {
-    width: 176px;
-    /* height: 14px; */
-    padding: 18px;
-    margin: 0;
-    font-size: 14px;
-  } 
-  .brand a {
-    display: block;
-  }
-  /* 공통 메인 */
 
-@media all and (max-width: 767px){
+/* 공통 로고 */
+.brand {
+  width: 176px;
+  /* height: 14px; */
+  padding: 18px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.brand a {
+  display: block;
+}
+
+/* 공통 푸터 */
+.app-footer-container {
+  background: var(--theme-dark);
+  color: var(--theme-disable);
+}
+.app-footer {
+  font-size: 1.2rem;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+.app-footer > * {
+  width: 100%;
+}
+.footer-brand {
+  padding: 20px 0 10px;
+}
+.guide-list {
+  order: -1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 15px 0;
+  
+}
+.guide-list li {
+  margin: 0 5px;
+}
+.guide-list li a {
+  display: block;
+  padding: 5px 0;
+}
+.address {
+  font-style: normal;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.address span {
+  margin: 10px 5px 0;
+}
+.copyright {
+  font-size: 1.1rem;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+/* 공동 위로가기 버튼 */
+.button-goToTop {
+  background: transparent;
+  border: none;
+  position: fixed;
+  padding: 0;
+}
+
+@media all and (max-width: 767px) {
+
   /* 모바일 헤더 */
   /* 햄버거 메뉴 */
   .is-open-menu {
@@ -42,8 +99,9 @@ body {
     height: 50px; */
     padding: 18px 16px;
     background-color: transparent;
-    
+
   }
+
   .is-open-menu .ir {
     display: inline-block;
     width: 100%;
@@ -52,6 +110,7 @@ body {
     width: 18px;
     height: 14px;
   }
+
   /* 모바일 내비게이션 */
   .app-navigation {
     /* display: none; */
@@ -67,12 +126,15 @@ body {
     backdrop-filter: blur(5px);
     padding-top: 66px;
   }
+
   .app-navigation li {
     border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
-  } 
+  }
+
   .app-navigation li:last-child {
     border-bottom: 0;
   }
+
   .app-navigation a {
     display: block;
     padding: 12px 22px;
@@ -83,6 +145,7 @@ body {
   .app-navigation a:focus {
     background: #2e437c;
   }
+
   .is-close-menu {
     position: absolute;
     top: 0;
@@ -93,34 +156,71 @@ body {
     color: #f2f2f2;
     font-size: 2rem;
   }
+
   .is--active .app-navigation {
     transform: none;
   }
-
+  /* 모바일 푸터 */
+  .guide-list {
+    border-bottom: 1px solid currentColor;
+  }
+  .address,
+  .copyright {
+    padding: 0 20px;
+  }
+  .button-goToTop {
+    bottom: 15px;
+    right: 15px;
+  }
 }
 
-@media all and (min-width: 768px){
+@media all and (min-width: 768px) {
+
   /* 데스크탑 헤더 */
   .app-header-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
   }
+
   .app-header {
     width: 768px;
   }
+
   .is-open-menu,
   .is-close-menu {
     display: none;
   }
+
   /* 데스크탑 내비게이션 */
   .app-navigation ul {
     display: flex;
     flex-flow: row nowrap;
   }
+
   .app-navigation li {
     margin-left: 8px;
     color: #2e437c;
-  } 
-                                                                                                                                                                                                                                                                                    
+  }
+  /* 데스크탑 푸터 */
+  .app-footer-container {
+    position: relative;
+  }
+  .app-footer-container::before {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    border: 1px solid currentColor;
+  }
+  .app-footer {
+    width: 740px;
+    margin: 0 auto;
+  }
+  /* 데스크탑 위로가기 버튼 */
+  .button-goToTop {
+    right: 50px;
+    bottom: 50px;
+  }
 }
