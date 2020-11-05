@@ -1,0 +1,118 @@
+/* 공통 음료 목록 */
+.ediya-menu {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* 공통 음료 아이템 */
+.ediya-menu__item {
+  width: 100%;
+  background: var(--theme-bright2);
+  margin-top: 20px;
+  height: 400px;
+}
+.ediya-menu__item:first-child {
+  margin-top: 0;
+}
+.ediya-menu__item [role="button"] {
+  display: block;
+}
+.ediya-menu__item figure {
+  margin: 0;
+  padding: 20px 0 40px;
+  text-align: center;
+}
+.ediya-menu__item img {
+  transform: scale(0.85);
+  transition: 0.4s;
+}
+.ediya-menu__item [role="button"]:hover img {
+  transform: scale(1);
+}
+
+@media all and (min-width: 768px) {
+  /* 데스크탑 음료 목록 */
+  .ediya-menu {
+    width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-between;
+  }
+  .ediya-menu__item {
+    width: 360px;
+  }
+  .ediya-menu__item:nth-child(2) {
+    margin: 0;
+  }
+}
+
+/* .ediya-menu {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.ediya-menu__item {
+  width: 45%;
+  margin: 10px 10px;
+  position: relative;
+  padding: 10px 30px 10px;
+  background: rgba(0, 0, 0, .05);
+
+}
+.ediya-menu__item a {
+  display: block;
+}
+.ediya-menu__item figure {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0;
+  padding: 3em 0;
+}
+.ediya-menu__item img {
+  max-width: 100%;
+  height: auto;
+}
+.ediya-menu__item--detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px;
+}
+.ediya-menu__item--name {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #181818;
+}
+.ediya-menu__item--name span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.ediya-menu__item--multi-column {
+  font-size: 1.5rem;
+  margin-top: 130px;
+}
+.ediya-menu__item--multi-column dl {
+  display: flex;
+  flex-flow: row wrap;
+  background: #eee;
+}
+.ediya-menu__item--multi-column dt {
+  width: 45%;
+  margin: 0;
+}
+.ediya-menu__item--multi-column dd {
+  width: 45%;
+  margin: 0;
+}
+.button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+} */
